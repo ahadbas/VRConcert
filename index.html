@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Hackathon, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SXM Hackathon</title>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+
+</head>
+<body>
+        <a-scene>
+          <a-assets>
+              <audio id="vox" src="audio/Moby - Almost Home - Vox.mp3"></audio>
+              <audio id="perc" src="audio/Moby - Almost Home - Perc.mp3"></audio>
+              <audio id="bass" src="audio/Moby - Almost Home - Bass.mp3"></audio>
+              <audio id="guitar" src="audio/Moby - Almost Home - Guitar.mp3"></audio>
+              <audio id="keys" src="audio/Moby - Almost Home - Keys.mp3"></audio>
+              <audio id="strings" src="audio/Moby - Almost Home - Strings.mp3"></audio>
+              <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+              
+          </a-assets>
+          <a-entity text-geometry="value: Vocals" position="-0.5 1 -1.5" color="#ffffff" scale="0.5 0.5 0.5"></a-entity>
+          <a-entity text-geometry="value: Drums" position="-0.5 1 -6" color="#ffffff" scale="0.5 0.5 0.5"></a-entity>
+          <a-entity text-geometry="value: Bass" position="-3.3 1 -3.3" color="#ffffff" scale="0.5 0.5 0.5"></a-entity>
+          <a-entity text-geometry="value: Guitar" position="2.5 1 -3.1" color="#ffffff" scale="0.5 0.5 0.5"></a-entity>
+          <a-entity text-geometry="value: Strings" position="2.5 1.075 -6" color="#ffffff" scale="0.5 0.5 0.5"></a-entity>
+          <a-entity text-geometry="value: Synth" position="-2.9 1.075 -6" color="#ffffff" scale="0.5 0.5 0.5"></a-entity>
+              
+          <a-sphere position="-2.916 0.5 -3.443" rotation="0 45 0" radius=".5" color="#4CC3D9"
+                      sound="src: #bass;
+                      autoplay: true"></a-sphere>
+
+                <a-sphere position="2.804 0.5 -3.457" rotation="0 -45 0" radius=".5" color="#4CC3D9"
+                      sound="src: #guitar;
+                      autoplay: true"></a-sphere>
+
+                <a-sphere position="0.072 0.5 -5.936" radius=".5" color="#EF2D5E" 
+                      sound="src: #perc;
+                      autoplay: true"></a-sphere>
+
+                <a-sphere position="0.02 0.5 -1.5" radius=".5" color="#FFC65D"
+                      sound="src: #vox;
+                      autoplay: true">
+                </a-sphere>
+
+                <a-sphere position="-2.581 0.5 -6.116" radius=".5" color="#FFC65D" 
+                      sound="src: #keys;
+                      autoplay: true">
+                </a-sphere>
+
+                <a-sphere position="3 0.5 -6.116" radius=".5" color="#FFC65D" 
+                      sound="src: #strings;
+                      autoplay: true">
+                </a-sphere>
+
+                <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" >
+                </a-plane>
+                <!-- <a-camera position=" 0 1.2 0"></a-camera> -->
+                <!-- <a-camera position="-0.307 0.99 0.715" rotation="-1.49 1.833 0" camera="active:false" look-controls="" wasd-controls="" data-aframe-inspector-original-camera=""></a-camera> -->
+                <a-camera position="0 -.6 1.5" rotation="0 0 0" camera="active:true"></a-camera>
+                <a-sky color="#ECECEC"></a-sky>
+                <!-- <a-sound src="#vox" autoplay="true" position="0.746 0.956 -3.37"></a-sound>
+                <a-sound src="#perc" autoplay="true" position="-0.503 0.558 -5.5"></a-sound> -->
+              </a-scene>
+    
+</body>
+</html>
